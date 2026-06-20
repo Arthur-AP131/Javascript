@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calculadora">
+        <input class="input" id='n1' placeholder="digite o primeiro valor">  <input class="input" id='n2' placeholder="digite o segundo valor">
+        <button id="botao" onclick='somar()'>Somar</button>
+        <button id="botao" onclick='subtrair()'>Subtrair</button>
+        <p id='resultado'> O resultado é: </p>
+    </div>
+    
+    <script>
+        function somar() {
+            
+            let a = parseFloat(document.getElementById('n1').value);
+            let b = parseFloat(document.getElementById('n2').value);
+
+            if (!a || !b){
+                alert("preencha todos os campos")
+            }else{
+                let mais = a+b
+                document.getElementById('resultado').textContent = "O resultado é: " + mais;
+            }
+
+        }
+
+        function subtrair(){
+            
+            let a = parseFloat(document.getElementById('n1').value);
+            let b = parseFloat(document.getElementById('n2').value);
+            
+            if (!a || !b){
+                alert("preencha todos os campos")
+            }else{
+                let menos = a-b
+                document.getElementById('resultado').textContent = "O resultado é: " + menos;
+            }
+            
+        }
+    </script>
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+        #calculadora{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            background-color: rgb(212, 215, 218);
+            
+        }
+
+        .input{
+            height: 30px;
+            width: 80%;
+            border: 3px solid black;
+            margin: 8px;
+        }
+
+        #botao{
+            height: 40px;
+            width: 200px;
+            margin: 10px;
+            background-color: rgb(0, 98, 255);
+            border: 3px solid rgb(0, 128, 255);
+        }
+
+        #botao:hover{
+            background-color: aliceblue;
+        }
+
+
+
+    </style>
+
+    
+</body>
+</html>

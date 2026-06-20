@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id = "titulo">Olá</h1>
+
+    <p id = "paragrafo">lorem ipsum ou sei lá oq</p>
+
+    <button id = "botao">botão</button>
+
+    <input id="input" type="text">
+
+    <p id="inptxt"></p>
+
+    <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7fIvC04gT34GkGhHgVXHhTHBKBShGshybqre2HZnRWg&s" alt="">
+
+    <script>
+
+        //01
+
+        document.getElementById("botao").addEventListener("click",function(){
+            document.getElementById("paragrafo").textContent = 'texto mudado';
+        })
+
+        //02
+
+        document.getElementById("input").addEventListener("input",function(e){
+            document.getElementById("inptxt").textContent = e.target.value;
+        })
+
+        //03
+
+        document.getElementById("img").addEventListener("mouseover",function(){
+            document.getElementById("img").style.borderColor="red"
+        })
+
+
+
+
+    </script>
+
+    <style>
+
+        #img{
+            border: 5px solid blue;
+        }
+
+    </style>
+
+    
+</body>
+</html>
